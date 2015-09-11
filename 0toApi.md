@@ -1,20 +1,20 @@
 build-lists: true
-footer: 0 to API in node.js, jon madison, Seattle Code Camp 2015
+footer: 0 to API in node.js, @jonmadison, Seattle Code Camp 2015
 slidenumbers: true
 
 # [fit] 0 to API in node.js
 
 ^before the talk:
 
-^su - jon
-
-^postgres -D /usr/local/var/postgres
+^sudo su - jon -c  'postgres -D /usr/local/var/postgres'
 
 ^cd ~/presentations/0toAPI/ft
 
 ^subl .
 
 ---
+![right](./images/yes2.gif)
+
 #Have you ever wanted to 
 
 - start a web app from scratch?
@@ -135,7 +135,7 @@ Let's get into it. Why would i want to spin up an API just like that?
 I had a concept a few years back called "flower thing", which was supposed to be a site to help people envision, create, and share flower garden ideas and the like. It had a component where you could research viable flowers in your locale. To feed this, i took data from a government db of flowers http://plants.usda.gov/java/. it's pretty much a PITA to get the data from this database http://plants.usda.gov/adv_search.html. I re-exposed it to my rails web app. What i’d like to do is take this data instead and expose it as a pure API, so i can write both a web and mobile app.
 
 ---
-#Before we start, we'll need (in addition to node.js)
+#Before we start ``jjvf
 
 - express (from StrongLoop)
 - mocha
@@ -424,6 +424,7 @@ describe('basics',function(){
 - i hope you've seen that node.js is a bit of fun when it comes to doing this stuff.
 
 ^0:55
+
 ---
 ![fill filtered](./images/library.jpg)
 #Resources
