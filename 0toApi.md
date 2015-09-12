@@ -630,3 +630,12 @@ it('should return a particular plant',function(done){
 #me@jonmadison.com
 #jon madison on most of the things
 ![inline](./images/blackhandside.gif)
+
+---
+#github links
+[This Talk](https://github.com/jonmadison/zero-to-api-talk)
+
+[API Example](https://github.com/jonmadison/zero-to-api-ft-example)
+
+[iOS Client](https://github.com/jonmadison/zero-to-api-ios-client)
+
