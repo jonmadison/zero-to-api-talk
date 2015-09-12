@@ -4,6 +4,10 @@ slidenumbers: true
 
 # [fit] 0 to API in node.js
 
+^(tell story of how harry hit you up about presenting and how your talk was accepted and how you had to turn these notes into a talk, lol) 
+
+^I've spent a bit of time pairing with devs showing them node.js. Think of this as sitting and pairing with me as we start a node API. with lots of other people pairing, and you not getting to type at all.
+
 ^before the talk:
 
 ^turn on Do Not Disturb
@@ -592,6 +596,15 @@ it('should return a particular plant',function(done){
 [Token Authentication and Single Page Apps](https://stormpath.com/blog/token-auth-spa/)
 
 ^I can't stress this enough--if you're working in JavaScript, take some time to really get to know it. the "Understanding the weird parts" talk is one of the best resources i've found thus far on the subject. One of the best $32 you'll spend as a developer.
+
+---
+![fill filtered](./images/library.jpg)
+#Related Code Camp sessions
+[11:00 AM-12:00 PM TDD with TypeScript, AngularJS and Node.js](https://seattle.codecamp.us/Session/Details/12)
+
+[2:15 PM-3:15 PM Building Modern Web Front Ends on AWS, Linux and ReactJS](https://seattle.codecamp.us/Session/Details/24)
+
+[3:30 PM-4:30 PM Testing Node APIs With Mocha and SuperTest](https://seattle.codecamp.us/Session/Details/71)
 
 ---
 #Questions?
