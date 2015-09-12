@@ -43,17 +43,17 @@ slidenumbers: true
 ![left](./images/jon_old.png)![inline 95%](./images/krs.gif)
 
 ---
-![filtered 99%](./images/nordstrom_logo.png) 
+![](./images/Norsdtrom-logo.jpg) 
 
 ---
-![filtered 99%](./images/nordstrom_logo.png) 
+![fill filtered](./images/Norsdtrom-logo.jpg) 
 
 ![inline fill](./images/cec.JPG)   ![inline rightfill](./images/textstyle.PNG)
 
 
 ^0:02
 
-^I'm a full stack application developer currently at Nordstrom on the Customer Mobile team. I work on a great product called Next, which is used by our Salespeople to deliver customer experience via text messaging. Textstyle is a feature that lets customers make purchases using their SMS client.
+^I'm a full stack application developer currently at Nordstrom on the Customer Mobile team. I work on a great product called "Next". It is used by our Salespeople to deliver customer experience via text messaging. Textstyle is a feature that lets customers make purchases using their SMS client.
 
 ---
 ![inline fill](./images/cec.JPG)
@@ -63,7 +63,7 @@ slidenumbers: true
 
 ^For the past few years i've worked on several customer experiences in store, and in our test store, as much as possible using an API first approach.
 
-^I've been doing web work for a while now in varying capacities, all technical, whether it be engineer, onsultant, or application architect. On the web front, here are the technologies & frameworks i've spent most of my time in
+^[SAY] I've been doing web work for a while now in varying capacities, all technical, whether it be engineer, onsultant, or application architect. On the web front, here are the technologies & frameworks where i've spent most of my time.
 
 ---
 ![inline ](./images/CGIlogo.gif) 
@@ -87,7 +87,7 @@ slidenumbers: true
 
 ---
 #[fit]Why API, first?
-![left](./images/why.png)
+![left](./images/whywhy.gif)
 ![right](./images/service_orient.jpg)
 
 ^0:04
@@ -106,7 +106,7 @@ slidenumbers: true
 
 ^0:05
 
-^Since this talk is about API-first, i'll start with this API box, first.
+^[SAY] Since this talk is about API-first, i'll start with this API box, first.
 
 ---
 ![fill](./images/diagrams/API-1.png)
@@ -130,6 +130,8 @@ slidenumbers: true
 
 ^Oh yeah, we're no longer talking about just a SPA, because your API at the hub is now enabling all sorts of other things you hadn't thought about. Or at least that's the idea. For this talk, trust me on that. :)
 
+^[SAY] So, that's API-first in a nutshell.
+
 ---
 #Why node.js?
 ![fill filtered](./images/quirky.png)
@@ -149,7 +151,9 @@ slidenumbers: true
 
 ^[CLICK] it's powerful. it's minimal enough to run on a micro computer (Raspberry Pi, Edison) but allow you to do some really cool stuff within that small footprint.
 
-^[CLICK] I happen to enjoy javascript. It's quirky, and i like quirky. It can be lovely when used properly. and with enhancements to the language, it's only going to get better.
+^[CLICK] I happen to enjoy javascript. It's quirky, and i like quirky. 
+
+^[SAY] And that's why I recommend node.js.
 
 ---
 ![fill filtered](./images/baby1.jpg)
@@ -175,6 +179,8 @@ I had a concept a few years back called "flower thing", which was supposed to be
 
 ^At the time, I re-exposed this info to my rails web app. What i’d like to do is take this data instead and expose it as a pure API, so i can write both a web and mobile app quickly. Again, this isn't something you can't do with rails, but i can move faster doing this in node, and still have a handle on the code that i've written.  
 
+^[SAY] Now that we have our idea, let's plan out our technology stack.
+
 ---
 ![fill](./images/flower1.jpg)
 
@@ -189,7 +195,9 @@ I had a concept a few years back called "flower thing", which was supposed to be
 
 ^[SLIDE] mocha is a test framework for javascript. There are others, and I encourage you to find one that suits your needs. Mocha suits mine.
 
-^js-must: There are several assertion libraries--i think should is one of the most popular, but i recently came across must and i'm sold, as it seems to fix a few gotchas with the should library. Chai is also a popular expectations library, that claims to get you closer to BDD.
+^We will also be using an "assertion library" named "js-must". There are several assertion libraries--i think should is one of the most popular, but i recently came across must and i'm sold, as it seems to fix a few gotchas with the should library. Chai is also a popular expectations library, that claims to get you closer to BDD.
+
+^[SAY] Now that know what we'll be using to help us build, let's look at the architecture, next.
 
 ---
 ![inline](./images/arch.png)
@@ -204,6 +212,8 @@ I had a concept a few years back called "flower thing", which was supposed to be
 ![inline](./images/arch_test.png)
 
 ^we'll use supertest to spin up our express server and make API calls. They're gonna fail first, then we'll write the functionality.
+
+^[SAY] Our examples will involve writing tests, and making them pass, and we'll spend most of our time with the test, the router, and the controller.
 
 ---
 #Create the project
@@ -221,6 +231,8 @@ I had a concept a few years back called "flower thing", which was supposed to be
 ^Now that we have that out of the way, let's get some stuff installed that'll help us along
 
 ^Thing is, express-generator is okay, but it assumes that you're building an entire website. It gives us a little too much (not as much as rails however ;-) so there's cruft to remove in the directory structures, and the app driver. I detail that in the github repo notes.
+
+^[SAY] Now that we've created the project skeleton, let's take a step back, and thnk about our design.
 
 ---
 ![fill filtered](./images/rest1.jpg)
@@ -240,7 +252,7 @@ I had a concept a few years back called "flower thing", which was supposed to be
 ^ [CLICK] some operations should be idempotent -- the result of a successful performed request is independent of the number of times it is executed
 ^ [CLICK] just try to be as common sense and consistent as possible. 
 
-^let's see an example of a resource, in a common data format, JSON.
+^[SAY] let's see an example of a resource, in a common data format, JSON.
 
 ---
 ![fill filtered](./images/Portrait-of-Oha-kepau-flower.jpg)
@@ -313,7 +325,7 @@ I had a concept a few years back called "flower thing", which was supposed to be
 
 ^Here's how I decided to show a list of plants for now. IRL i'd probably have some meta info like pagination info, number of total results or somesuch, etc.
 
-^How should we ask for this resource? using HTTP verbs, in this case specifically GET.
+^[SAY] How should we ask for this resource? using HTTP verbs, in this case specifically GET.
 
 ---
 
@@ -344,7 +356,7 @@ I had a concept a few years back called "flower thing", which was supposed to be
 ![fill](./images/disney0.jpg)
 
 ^0:24
-^Now, let's get into writing tests to make these designs come true.
+^[SAY] Now, let's get into writing tests to make these designs come true.
 
 ---
 ![fill filtered](./images/disneydim0.jpg)
@@ -447,6 +459,7 @@ it('should return a particular plant',function(done){
 ^[SUBLIME TEXT] controllers/plants.js 2-impl tab
 
 ---
+![fill filtered](./images/disneydim0.jpg)
 #Support querying
 
 ```javascript
@@ -487,7 +500,7 @@ it('should return a particular plant',function(done){
 
 ^[SUBLIME TEXT] controllers/plants.js 2-refactor tab
 
-^We'll stop here. In a fleshed out API, we'd handle pagination, have more search options, etc. as needed. Let's get this pushed to the Nets!
+^[SAY] We'll stop here. In a fleshed out API, we'd handle pagination, have more search options, add our authentication and authorization, etc. as needed. Now let's talk about pushing this to the cloud.
 
 ---
 ![right](./images/internet_surf.gif)
@@ -512,6 +525,11 @@ it('should return a particular plant',function(done){
 ^edit your .gitignore to include node_modules/
 
 ^commit, and push. it really is like magic...heroku recognizes that you're building a node app--our app already is looking for the DATABASE_URL variable 
+
+^let's do a simple curl request to make sure everything is okay. Let's ask for plants
+^curl https://ftapi-ex.herokuapp.com/v1/plants
+
+^[SAY] We're in the cloud! Now I want to give one example of how we'd utilize it.
 
 ---
 ![fill](./images/iOS-Swift-Logo.png)
@@ -566,7 +584,7 @@ it('should return a particular plant',function(done){
 
 ^ [SLIDE] Unfortunately I don't have time to walk through the configuration of PassportJS in your app; There's enough info for it's own talk.
 
-^ There are a whole host of security considerations you should be familiar with, depending on the fidelity of what you're building.
+^[SAY] There are a whole host of security considerations you should be familiar with, depending on the fidelity of what you're building.
 
 ---
 ![right fill](./images/yes2.gif)
@@ -578,7 +596,7 @@ it('should return a particular plant',function(done){
 
 ^ [CLICK]
 ^ [CLICK]
-^ [CLICK] I hope you found node as interesting as i think it is for solving this set of problems.
+^ [CLICK] [SAY] I hope you found node as interesting as i think it is for solving this set of problems.
 
 ^0:48
 
